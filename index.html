@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Donated Data Software</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/css/reveal.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/css/theme/sky.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/zenburn.min.css">
+
+    <script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/css/print/pdf.css' : 'https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+
+        <!-- 
+        
+        General structure (30 minutes. 20 minutes + 10 minutes for questions)
+
+        Demonstration of the extension: (5 minutes)
+         - Request data
+         - Show download page, previously requested data
+         - Download and upload (use existing file if too slow)
+
+        In Jupyter: (10 minutes)
+         - Load location data using Niimpy.
+         - Plot a route on a map.
+        -->
+
+        <section data-markdown data-separator="^\n---\n$" data-separator-vertical="^\n--\n$">
+          <textarea data-template>
+            # Donated Data
+            Jarno Rantaharju - May 22, 2025
+
+            ---
+            
+            ## Data Collection
+            
+            - The image of the polar watch
+            - Points: Takes time, expensive, requires effort from the subject
+
+            ---
+
+            ## Data already exists
+            
+            - Thanks to GDPR and similar regulations, we have access to a throve of data
+            - Image, maybe someone walking with a phone
+
+            ---
+
+            ## Demonstration
+
+            - Link to the extension (already installed)
+              - Study page requirements
+              - Requesting data
+              - Downloading and uploading
+            - Move to Jupyter
+              - Load location data using Niimpy
+              - Plot a route on a map
+            
+            ---
+
+            ## Questions
+
+            </textarea>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/headjs@1.0.3/dist/1.0.0/head.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/js/reveal.min.js"></script>
+
+    <script>
+      // Full list of configuration options available here:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: true,
+        // Display a presentation progress bar
+        progress: true,
+        // Push each slide change to the browser history
+        history: true,
+        // Center slides vertically
+        center: true,
+        // Transition style
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+        // Transition speed
+        transitionSpeed: 'default', // default/fast/slow
+        // Enable MathJax for LaTeX math typesetting
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js', // Path to MathJax
+          config: 'TeX-AMS_HTML-full', // MathJax config
+          // passOtherAttributes: true // Optional: Pass other attributes to MathJax
+        },
+
+        dependencies: [
+				{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/plugin/markdown/marked.js' },
+				{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/plugin/markdown/markdown.js' },
+				{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/plugin/notes/notes.js', async: true },
+				{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+				{ src: 'https://cdn.jsdelivr.net/npm/reveal.js@3.7.0/plugin/notes-server/client.js', async: true }
+
+		],
+		markdown: {
+			//            renderer: myrenderer,
+			smartypants: true
+		}
+      });
+    </script>
+  </body>
+</html>
