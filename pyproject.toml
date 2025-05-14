@@ -11,7 +11,8 @@ dependencies = [
     "notebook (>=7.4.1,<8.0.0)",
     "kaleido (==v0.2.1)",
     "niimpy (>=1.3.0,<2.0.0)",
-    "folium (>=0.19.5,<0.20.0)"
+    "folium (>=0.19.5,<0.20.0)",
+    "jupyterlab (>=4.4.2,<5.0.0)"
 ]
 
 
